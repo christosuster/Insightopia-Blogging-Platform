@@ -4,6 +4,7 @@ import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { GoogleLoginButton } from "react-social-login-buttons";
+
 const page = () => {
   const session = useSession();
   const router = useRouter();
