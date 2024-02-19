@@ -42,11 +42,18 @@ const Navbar = ({ user }: { user: User }) => {
       )}
     >
       <div className="flex w-full max-w-[1250px] px-5 justify-center items-center mx-auto">
-        <div className="flex-1">
+        <div className="flex-1 ">
           <Link
-            className="text-3xl font-extrabold bg-gradient-to-t from-blue-600 to-violet-600 bg-clip-text text-transparent"
+            className="text-3xl font-extrabold bg-gradient-to-t from-blue-600 to-violet-600 bg-clip-text text-transparent flex  items-center gap-2"
             href={"/"}
           >
+            <Image
+              className="bg-gradient-to-t from-blue-600 to-violet-600 rounded-full blend"
+              width={50}
+              height={50}
+              src={"/logo.png"}
+              alt="Logo"
+            />
             Insightopia
           </Link>
         </div>

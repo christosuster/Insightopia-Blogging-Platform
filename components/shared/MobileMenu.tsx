@@ -40,9 +40,16 @@ const MobileMenu = ({ user }: { user: User }) => {
           >
             <div className="border-b border-primary w-full py-5 text-center">
               <Link
-                className="text-4xl font-extrabold bg-gradient-to-t from-blue-600 to-violet-600 bg-clip-text text-transparent"
+                className="text-2xl font-extrabold bg-gradient-to-t from-blue-600 to-violet-600 bg-clip-text text-transparent flex  items-center gap-2 mx-auto w-full justify-center"
                 href={"/"}
               >
+                <Image
+                  className="bg-gradient-to-t from-blue-600 to-violet-600 rounded-full blend"
+                  width={50}
+                  height={50}
+                  src={"/logo.png"}
+                  alt="Logo"
+                />
                 Insightopia
               </Link>
             </div>

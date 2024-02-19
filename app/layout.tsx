@@ -14,7 +14,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Insightopia",
+  title: "Insightopia | Blogging Platform",
+
   description:
     "Discover stories, thinking, and expertise from writers on any topic.",
 };
@@ -27,6 +28,9 @@ export default async function RootLayout({
   const user = await getCurrentUser();
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={`${roboto.className} overflow-x-hidden bg-light`}>
         <AuthContext>
           <EdgeStoreProvider>
