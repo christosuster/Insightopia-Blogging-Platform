@@ -17,7 +17,7 @@ const page = () => {
   useEffect(() => {
     setLoading(true);
     if (selectedCategory === null) {
-      fetch(`http://insightopia-blogging-platform.vercel.app/api/getPosts/all`)
+      fetch(`https://insightopia-blogging-platform.vercel.app/api/getPosts/all`)
         .then((res) => res.json())
         .then((data) => setPosts(data))
         .finally(() => setLoading(false));
@@ -25,7 +25,7 @@ const page = () => {
     }
 
     fetch(
-      `http://insightopia-blogging-platform.vercel.app/api/getPosts/${selectedCategory}`
+      `https://insightopia-blogging-platform.vercel.app/api/getPosts/${selectedCategory}`
     )
       .then((res) => res.json())
       .then((data) => setPosts(data))

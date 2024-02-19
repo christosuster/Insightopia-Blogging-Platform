@@ -11,10 +11,7 @@ import { categories } from "@/constants/categories";
 
 const getData = async (id: string) => {
   const res = await fetch(
-    `http://insightopia-blogging-platform.vercel.app/api/post/${id}`,
-    {
-      cache: "no-store",
-    }
+    `https://insightopia-blogging-platform.vercel.app/api/post/${id}`
   );
 
   if (!res.ok) {
