@@ -9,7 +9,7 @@ const Hero = ({ post }: { post: PostTypes }) => {
   console.log(post);
 
   return (
-    <section className="relative rounded-lg overflow-hidden">
+    <section className="relative rounded-lg overflow-hidden border border-border">
       <div className="relative h-[500px] w-full ">
         <Image
           src={post.img as string}
@@ -38,7 +38,7 @@ const Hero = ({ post }: { post: PostTypes }) => {
         </div>
         <Link
           href={`/blog/${post.id}`}
-          className="py-3 px-5 outline mt-10 rounded-3xl outline-1 text-background hover:bg-background hover:text-foreground transition-all duration-300 ease-in font-semibold"
+          className="py-3 px-5 outline mt-10 rounded-3xl outline-1 text-white hover:bg-white hover:text-black transition-all duration-300 ease-in font-semibold"
         >
           Read Now
         </Link>

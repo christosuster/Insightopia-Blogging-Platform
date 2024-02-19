@@ -6,9 +6,7 @@ import Button from "../ui/Button";
 import { PostTypes } from "@/types/postTypes";
 import Input from "../ui/Input";
 
-const DeletePosts: React.FC<{ post: PostTypes }> = ({
-  post,
-}) => {
+const DeletePosts: React.FC<{ post: PostTypes }> = ({ post }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleDelete = () => {
@@ -21,42 +19,26 @@ const DeletePosts: React.FC<{ post: PostTypes }> = ({
 
   return (
     <div>
-      <Button
-        aria="delete post"
-        onClick={handleDelete}
-        text="Delete"
-        action
-      />
+      <Button aria="delete post" onClick={handleDelete} text="Delete" action />
 
       {showModal && (
         <>
           <div
-            className="fixed inset-0 flex items-center justify-center z-50"
+            className="fixed inset-0 flex items-center justify-center z-50 "
             onClick={() => setShowModal(false)}
           >
-            <div className="w-screen h-screen bg-black/40 absolute" />
+            <div className="w-screen h-screen bg-black/40 text-white absolute " />
             <div
-              className="bg-white p-6 rounded shadow-lg z-40"
+              className="bg-accent/30 backdrop-blur-xl p-6 rounded shadow-lg z-40 rounded-xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <p>
+              <p className="text-white">
                 Are you sure you want to delete this post?
               </p>
               <div className="flex gap-3 mt-5">
-                <form
-                  action={deletePost}
-                  onSubmit={closeModal}
-                >
-                  <Input
-                    type="hidden"
-                    name="postId"
-                    value={post.id}
-                  />
-                  <Button
-                    aria="delete post"
-                    type="submit"
-                    text="Yes"
-                  />
+                <form action={deletePost} onSubmit={closeModal}>
+                  <Input type="hidden" name="postId" value={post.id} />
+                  <Button aria="delete post" type="submit" text="Yes" />
                 </form>
                 <Button
                   aria="cance delete post"

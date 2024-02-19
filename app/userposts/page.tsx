@@ -23,8 +23,8 @@ const page = async () => {
       ) : (
         <div className="max-w-[90%] mx-auto">
           <div className="w-full text-center mb-10">
-            <h1 className="text-3xl font-extrabold text-primary">
-              Hello {user?.name}
+            <h1 className="text-3xl font-extrabold ">
+              Hello <span className="text-primary">{user?.name}</span>
             </h1>
             <span className="text-lg">
               You have published {posts.length} posts

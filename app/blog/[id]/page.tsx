@@ -10,9 +10,7 @@ import Link from "next/link";
 import { categories } from "@/constants/categories";
 
 const getData = async (id: string) => {
-  const res = await fetch(
-    `https://insightopia-blogging-platform.vercel.app/api/post/${id}`
-  );
+  const res = await fetch(`https://insightopia-blogging-platform.vercel.app/api/post/${id}`);
 
   if (!res.ok) {
     throw new Error("Failed");

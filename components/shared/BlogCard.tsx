@@ -8,8 +8,8 @@ import { categories } from "@/constants/categories";
 
 const BlogCard: React.FC<{ post: PostTypes }> = ({ post }) => {
   return (
-    <Link href={`/blog/${post.id}`} className="group col-span-2 lg:col-span-1">
-      <article className="relative rounded-lg overflow-hidden">
+    <Link href={`/blog/${post.id}`} className="group col-span-2 lg:col-span-1 ">
+      <article className="relative rounded-lg overflow-hidden border border-border">
         <div className="w-[1000px] h-[450px] relative">
           {post.img && (
             <Image

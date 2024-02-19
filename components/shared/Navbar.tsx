@@ -11,6 +11,7 @@ import { User } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navbar = ({ user }: { user: User }) => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -36,23 +37,26 @@ const Navbar = ({ user }: { user: User }) => {
   return (
     <nav
       className={clsx(
-        "py-4 w-full fixed z-10 top-0 bg-white  transition-all duration-300 ease-in-out ",
+        "py-4 w-full fixed z-10 top-0 bg-accent/50 backdrop-blur-2xl transition-all duration-300 ease-in-out ",
         isScrolling && "shadow-lg"
       )}
     >
       <div className="flex w-full max-w-[1250px] px-5 justify-center items-center mx-auto">
         <div className="flex-1">
-          <Link href={"/"}>
-            <h1 className="text-3xl font-extrabold text-accent">Insightopia</h1>
+          <Link
+            className="text-3xl font-extrabold bg-gradient-to-t from-blue-600 to-violet-600 bg-clip-text text-transparent"
+            href={"/"}
+          >
+            Insightopia
           </Link>
         </div>
 
-        <ul className="flex items-center text-lg  justify-center gap-16 flex-2 max-md:hidden ">
+        <ul className="flex font-bold items-center text-lg  justify-center gap-16 flex-2 max-md:hidden ">
           {navLinks.map((link, index) => {
             const isActive = useMenuActive(link.route);
 
             return (
-              <li key={index} className="hover:text-secondary">
+              <li key={index} className="hover:text-muted">
                 <Route
                   route={link.route}
                   label={link.label}
@@ -62,30 +66,28 @@ const Navbar = ({ user }: { user: User }) => {
             );
           })}
         </ul>
+        <div className="flex-1 flex justify-end pr-5">
+          <ThemeSwitcher />
+        </div>
 
         {!user && (
-          <div className="flex gap-5 flex-1 justify-end max-md:hidden">
+          <div className="flex gap-5  justify-end max-md:hidden">
             <Button
-              text="Log In"
+              text="Sign Up / Sign In"
               onClick={() => router.push("/access")}
               aria="Log in button"
-            />
-            <Button
-              text="Sign Up"
-              onClick={() => router.push("/access")}
-              aria="Sign up button"
             />
           </div>
         )}
 
         {user && (
-          <div className="flex gap-5 items-center flex-1 justify-end max-md:hidden">
-            <h1 className="font-bold text-accent">{user.name}</h1>
+          <div className="flex gap-5 items-center  justify-end max-md:hidden">
+            <h1 className="font-bold text-foreground/80">{user.name}</h1>
             <Image
               src={user.image as string}
               width={50}
               height={50}
-              className="rounded-full border-4 border-accent cursor-pointer"
+              className="rounded-full border-2 border-foreground/80 cursor-pointer"
               alt={`Image of ${user.name}`}
               onClick={() => setOpenUserMenu(!openUserMenu)}
             />
@@ -93,18 +95,25 @@ const Navbar = ({ user }: { user: User }) => {
         )}
 
         {openUserMenu && (
-          <ul className="z-10 absolute right-12 top-[70px] w-48 bg-white shadow-md rounded-md p-4">
-            <Link href="/userposts" onClick={() => setOpenUserMenu(false)}>
-              <li>My Posts</li>
+          <div className="z-10 absolute right-32 top-[70px] px-6 bg-accent/50 backdrop-blur-xl shadow-md rounded-md p-4 flex flex-col justify-center items-center">
+            <Link
+              href="/userposts"
+              onClick={() => setOpenUserMenu(false)}
+              className="hover:text-foreground font-bold text-muted"
+            >
+              My Posts
             </Link>
 
-            <li className="cursor-pointer" onClick={() => signOut()}>
-              Sign out
-            </li>
-          </ul>
+            <button
+              className="hover:text-foreground font-bold text-muted"
+              onClick={() => signOut()}
+            >
+              Sign Out
+            </button>
+          </div>
         )}
 
-        <div>
+        <div className="">
           <MobileMenu user={user} />
         </div>
       </div>

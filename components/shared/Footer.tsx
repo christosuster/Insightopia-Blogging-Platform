@@ -1,14 +1,5 @@
 "use client";
 
-import {
-  FaSquareXTwitter,
-  FaSquareInstagram,
-  FaSquareSnapchat,
-} from "react-icons/fa6";
-import { FaFacebookSquare } from "react-icons/fa";
-import useMenuActive from "@/hooks/useMenuActive";
-import { navLinks } from "@/constants";
-import Route from "../ui/Route";
 import Link from "next/link";
 import {
   FacebookIcon,
@@ -19,13 +10,11 @@ import {
 
 const Footer = () => {
   return (
-    <div className="w-full py-5 bg-foreground mt-10">
+    <div className="w-full py-5 bg-accent/50 backdrop-blur-2xl transition-all duration-300 ease-in-out0 mt-10 text-primary ">
       <div className="w-[95%] mx-auto max-w-[1250px]">
         <div className="w-full text-center lg:hidden flex flex-col">
-          <h1 className="text-3xl text-primary font-bold mb-3 mt-5">
-            Insightopia
-          </h1>
-          <p className="text-secondary ">
+          <h1 className="text-3xl  font-bold mb-3 mt-5">Insightopia</h1>
+          <p className=" ">
             Welcome to Insightopia, where minds converge and ideas flourish.
             We're a vibrant community dedicated to the pursuit of knowledge and
             understanding. From science and technology to arts and culture, our
@@ -41,35 +30,35 @@ const Footer = () => {
             <Link href="https://www.facebook.com/">
               <FacebookIcon
                 size={32}
-                className="text-secondary hover:text-primary transition-all duration-300 ease-in-out"
+                className=" hover:text-foreground transition-all duration-300 ease-in-out"
               />
             </Link>
             <Link href="https://www.twitter.com/">
               <TwitterIcon
                 size={32}
-                className="text-secondary hover:text-primary transition-all duration-300 ease-in-out"
+                className=" hover:text-foreground transition-all duration-300 ease-in-out"
               />
             </Link>
             <Link href="https://www.instagram.com/">
               <InstagramIcon
                 size={32}
-                className="text-secondary hover:text-primary transition-all duration-300 ease-in-out"
+                className=" hover:text-foreground transition-all duration-300 ease-in-out"
               />
             </Link>
             <Link href="https://www.youtube.com/">
               <YoutubeIcon
                 size={32}
-                className="text-secondary hover:text-primary transition-all duration-300 ease-in-out"
+                className=" hover:text-foreground transition-all duration-300 ease-in-out"
               />
             </Link>
           </div>
         </div>
 
-        <div className="w-full text-center mt-5 text-sm text-white">
+        <div className="w-full text-xl text-center my-5">
           <h1>
             Developed by{" "}
             <a
-              className="font-bold text-secondary"
+              className="font-bold text-muted"
               href="https://www.christosuster.me/"
             >
               Christos Uster Biswas
