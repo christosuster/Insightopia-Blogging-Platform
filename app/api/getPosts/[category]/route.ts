@@ -1,8 +1,8 @@
 import prisma from "@/lib/prismadb";
-import { NextApiRequest } from "next";
+import { NextRequest } from "next/server";
 
 export async function GET(
-  req: NextApiRequest,
+  req: NextRequest,
   context: { params: { category: string } }
 ) {
   const { category } = context.params;
