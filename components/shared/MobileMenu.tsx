@@ -68,7 +68,10 @@ const MobileMenu = ({ user }: { user: User }) => {
               <div className="flex gap-5 flex-1 flex-col py-5 ">
                 <button
                   className="bg-primary text-secondary p-2 w-fit mx-auto  rounded-xl font-semibold hover:text-foreground hover:bg-accent transition-all duration-200 "
-                  onClick={() => router.push("/access")}
+                  onClick={() => {
+                    router.push("/access");
+                    setOpenMobileMenu(false);
+                  }}
                 >
                   Sign Up / Sign In
                 </button>
