@@ -1,10 +1,10 @@
 import prisma from "@/lib/prismadb";
 import { NextRequest } from "next/server";
 
-export async function GET(
+export const GET = async (
   req: NextRequest,
   context: { params: { category: string } }
-) {
+) => {
   const { category } = context.params;
 
   if (category === "all") {
@@ -37,4 +37,4 @@ export async function GET(
   });
 
   return Response.json(posts);
-}
+};

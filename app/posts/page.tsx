@@ -17,14 +17,16 @@ const page = () => {
   useEffect(() => {
     setLoading(true);
     if (selectedCategory === null) {
-      fetch(`http://localhost:3000/api/getPosts/all`)
+      fetch(`http://insightopia-blogging-platform.vercel.app/api/getPosts/all`)
         .then((res) => res.json())
         .then((data) => setPosts(data))
         .finally(() => setLoading(false));
       return;
     }
 
-    fetch(`http://localhost:3000/api/getPosts/${selectedCategory}`)
+    fetch(
+      `http://insightopia-blogging-platform.vercel.app/api/getPosts/${selectedCategory}`
+    )
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .finally(() => setLoading(false));
