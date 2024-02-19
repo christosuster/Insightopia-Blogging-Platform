@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Insightopia
 
-## Getting Started
+Insightopia is a user-friendly blogging platform where users can share their insights, stories, and expertise on a wide range of topics. It offers a seamless experience for creating profiles, writing articles, and engaging with a community of diverse voices.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Account Creation:** Log in using Google to access the platform's features.
+- **Article Creation:** Users can easily create articles for everyone to read.
+- **Browsing:** Browse and read articles created by other users to explore diverse perspectives and insights.
+- **Tag Filtering:** Filter articles by tags to discover content based on specific topics or interests.
+- **Light and Dark Modes:** Choose between light and dark themes for optimal viewing comfort.
+- **Responsive Design:** Ensures a consistent experience across devices, from desktops to mobile phones.
 
-Open [https://insightopia-blogging-platform.vercel.app](https://insightopia-blogging-platform.vercel.app) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![insightopia-blogging-platform vercel app_](https://github.com/christosuster/Insightopia-Blogging-Platform/assets/15941653/7fc130ea-d5ed-496d-a41f-b5cd09623d0b)
 
-## Learn More
+![insightopia-blogging-platform vercel app_ (1)](https://github.com/christosuster/Insightopia-Blogging-Platform/assets/15941653/9e1996f0-9857-4d8f-9413-6ac03d0b945f)
 
-To learn more about Next.js, take a look at the following resources:
+![insightopia-blogging-platform vercel app_](https://github.com/christosuster/Insightopia-Blogging-Platform/assets/15941653/25d96482-af0c-494e-990d-3b12c822aabc)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![insightopia-blogging-platform vercel app_ (1)](https://github.com/christosuster/Insightopia-Blogging-Platform/assets/15941653/851ae488-a17d-4174-bf88-de5e5d41a493)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![insightopia-blogging-platform vercel app_ (2)](https://github.com/christosuster/Insightopia-Blogging-Platform/assets/15941653/8a0bace6-8641-4e6f-9e59-b17660d98fcb)
