@@ -59,7 +59,7 @@ const Footer = () => {
             Developed by{" "}
             <a
               className="font-bold text-muted"
-              href="https://www.christosuster.me/"
+              href="https://www.christosuster.dev/"
             >
               Christos Uster Biswas
             </a>
